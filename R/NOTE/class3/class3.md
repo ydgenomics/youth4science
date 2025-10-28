@@ -12,9 +12,11 @@
 | 场景         | 假设      | R 函数                            |
 | ---------- | ------- | ------------------------------- |
 | 配对、正态      | 配对 t    | `t.test(x, y, paired=TRUE)`     |
+| 配对、非正态 | 配对wilcox |`wilcox.test(df$front, df$hind, paired = TRUE)`|
 | 独立、正态、方差齐  | 独立 t    | `t.test(x, y, var.equal=TRUE)`  |
 | 独立、正态、方差不齐 | Welch t | `t.test(x, y, var.equal=FALSE)` |
-| 独立、非正态     | 非参数     | `wilcox.test(x, y)`             |
+| 独立、非正态 、方差齐   | 非参数     | `wilcox.test(x, y)`             |
+|||`wilcox.test(fiber ~ group, data = data, alternative = "less")    # 若假设“食物 < 非食物”`|
 
 ---
 
